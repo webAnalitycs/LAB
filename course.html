@@ -66,10 +66,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 // Q3
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
 dataLayer.push({
-  event: "view_item_list",
+  event: "purchase",
   ecommerce: {
-    item_list_id: "EP12345",
-    item_list_name: "Ecommence Purchase",
+    transaction_id: "EP12345",
+    value: 200,
+    tax: 15,
+    shipping: 100,
+    currency: "Dollars",
+    affiliation: "online",	  
     items: [
      {
 	     index:0,
@@ -77,18 +81,6 @@ dataLayer.push({
 	     item_id: "ITM_1",
 	     
 	     item_name: "ONE",
-	     
-	     affiliation: "online",
-	     
-	     currency: "Dollars",
-	     
-	     tax: 15,
-	     
-	     transaction_id: "1",
-	     
-	     value: 1,
-	     
-	     shipping: "texas"
     },
     {
 	     index:1,
@@ -96,18 +88,7 @@ dataLayer.push({
 	     item_id: "ITM_2",
 	     
 	     item_name: "TWO",
-	     
-	     affiliation: "offline",
-	     
-	     currency: "Euros",
-	     
-	     tax: 14,
-	     
-	     transaction_id: "2",
-	     
-	     value: 2,
-	     
-	     shipping: "dallas"
+
     }]
   }
 });
